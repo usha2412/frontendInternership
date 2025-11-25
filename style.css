@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Notch:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+NZ+Guides&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Notch:wght@200..700&display=swap");
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.main-slides {
+  background:
+  url("https://as1.ftcdn.net/jpg/01/42/04/48/1000_F_142044867_cqgHthpqpBzRZdOQLfitGWkbcjc9Sunu.jpg");
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  overflow: hidden;
+  background-size: cover !important;
+  background-position: center !important;
+  transition: 0.3s ease-in-out background;
+ 
+}
+
+.main-slides::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.swiper {
+  border: solid rgba(245, 247, 248, 0.1);
+  max-width: 1200px;
+  padding: 50px 0px;
+  aspect-ratio: 16/9;
+  max-height: 100%;
+  min-width: 1000px;
+}
+
+.swiper-slide {
+  border: solid;
+  background-size: cover !important;
+  background-position: center !important;
+  scale: 0.8;
+  transition: 3s ease-in-out scale;
+  display: flex;
+  align-items: end;
+}
+
+.swiper-slide::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top, rgb(0,0,0,0,0.75), transparent) ;
+    width: 100%;
+    height: 50%;
+}
+.slide-info{
+    margin-left: -15%;
+    margin-bottom: 25px;
+    /* z-index: 1; */
+}
+
+.slide-title, .slide-desc{
+    opacity: 0;
+    transition: 0.7s ease-in-out opacity,0.7s ease-in-out bottom;
+    text-shadow: 4px 8px 15px rgb(0, 0, 0, 0.5) ;
+    position: relative;
+} 
+
+.slide-title {
+  font-size: clamp(30px, 4vw, 50px);
+  bottom: -30px;
+}
+.slide-desc{
+    font-size: clamp(18px,2.5vw, 30px);
+    bottom: -15px;
+    color: rgb(255,255, 255, 0.7);
+    font-weight: 600;
+}
+.swiper-slide-active {
+  scale: 1;
+  
+
+}
+
+.swiper-slide-active .slide-title,
+.swiper-slide-active .slide-desc{
+    opacity: 1;
+    bottom: 0;
+}
+/* .slide-info {
+  border: solid rgba(135, 88, 135, 0.638);
+} */
+
+.swiper-button-prev,
+.swiper-button-next {
+  scale: 0.7;
+  margin: 0, 50px;
+  color: beige;
+}
+
+.swiper-paggination-bullet {
+  background-color: beige;
+  width: 15px;
+}
+
+.swiper-pagination-bullet {
+  background: bisque;
+  width: 15px;
+  height: 15px;
+}
+
+.bharat{
+  color:rgb(230, 230, 236)
+}
+
+.yatra{
+  color: green;
+}
+
+.wel{
+  color: rgb(234, 86, 32);
+}
